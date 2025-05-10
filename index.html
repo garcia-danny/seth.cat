@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Seth the Cat"/>
+    <meta property="og:description" content="it's just a picture of a cat named seth, and i slightly enjoy him."/>
+    <meta property="og:image" content="https://i.ibb.co/gwW3hFk/he-will-kill-you.webp"/>
+    <meta property="og:url" content="http://seth.cat"/>
+    <meta property="og:type" content="https://seth.cat"/>
+    <meta name="theme-color" content="#fee7e7">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth The Cat</title>
+    <link rel="icon" href="https://i.ibb.co/k00LvY9/ermm-i-dont-like-seth.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: 'PT Sans', sans-serif;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #cat-container {
+            text-align: center;
+        }
+        #cat-image {
+            max-width: 30%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        #audio {
+            display: none;
+        }
+        p {
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        #dark-mode-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ddd;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        #dark-mode-button:hover {
+            background-color: #bbb;
+        }
+        .dark-mode #dark-mode-button {
+            background-color: #333;
+            color: #fff;
+        }
+        .dark-mode #dark-mode-button:hover {
+            background-color: #444;
+        }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 14px;
+            color: #555;
+        }
+        footer a {
+            text-decoration: none;
+            color: inherit;
+            margin: 0 10px;
+        }
+        footer img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .dark-mode footer {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="cat-container">
+        <img id="cat-image" src="images/seth.png" alt="Cute Cat">
+        <button id="dark-mode-button">Dark Mode</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/garcia-danny/seth.cat" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"> GitHub Repo
+        </a>
+        |
+        <a href="https://dannygarcia.org/" target="_blank">Visit My Main Website <a>
+    </footer>
+
+    <script>
+        const darkModeButton = document.getElementById('dark-mode-button');
+        const body = document.body;
+        let isDarkMode = false;
+
+        darkModeButton.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            body.classList.toggle('dark-mode', isDarkMode);
+            darkModeButton.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';
+        });
+    </script>
+</body>
+</html>
