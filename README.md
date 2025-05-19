@@ -23,4 +23,4 @@ This site is built and maintained by [Danny Garcia](https://DannyGarcia.org) a 1
 
 This project is licensed under the [MIT License](LICENSE).
 
-&copy; Danny Garcia
+&copy; Danny Garcia 2025
